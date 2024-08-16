@@ -23,16 +23,11 @@ const SelectPage = () => {
       const email = process.env.REACT_APP_FIREBASE_EMAIL
       const password = process.env.REACT_APP_FIREBASE_PASSWORD
 
-      console.log(email)
-      console.log(password)
-      console.log(auth)
-
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
         password
       )
-      console.log("🚀 ~ login ~ userCredential:", userCredential)
 
       setUser(userCredential.user)
     } catch (error) {
