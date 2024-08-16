@@ -18,6 +18,8 @@ import HostKiosks from "scenes/kiosk/hostkiosks"
 import HostFacials from "scenes/facials/hostfacials"
 import HostTransactions from "scenes/transactions/hosttarnsactions"
 import UpdateUserFacial from "scenes/facials/updatefacial"
+import SelectPage from "scenes/siteFirebase/SelectPage"
+import ObservePage from "scenes/siteFirebase/ObservePage"
 
 function App() {
   const mode = useSelector((state) => state.global.mode)
@@ -44,6 +46,11 @@ function App() {
             </Route>
             <Route path="/login" element={<Login />} />
             <Route path="/newpassword" element={<NewPassword />} />
+            <Route path="/sitefirebase" element={<SelectPage />} />
+            <Route
+              path="/sitefirebase/observe/:key"
+              element={<ObservePage />}
+            />
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

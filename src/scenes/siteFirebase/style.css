@@ -1,0 +1,83 @@
+/* styles.css */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+  color: #555;
+}
+
+.select-page,
+.observe-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* 부모 컨테이너에서 스크롤을 숨김 */
+}
+
+.title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.data-container {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 400px;
+  overflow-y: auto; /* 스크롤 가능하게 설정 */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.option-list,
+.data-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.option-item,
+.data-item {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option-item:hover,
+.data-item:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #cc0000;
+}
