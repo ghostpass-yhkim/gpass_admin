@@ -19,9 +19,14 @@ const ObservePage = () => {
       if (snapshot.exists()) {
         const data = snapshot.val()
         const formattedData = Object.values(data).map((item) => {
-          const { Name, PhoneNo } = item
+          const { Name, PhoneNo, appVersion, gyro, networkType, osVersion } =
+            item
           const phoneLastFour = PhoneNo.slice(-4)
-          return `${Name} + ${phoneLastFour}`
+          if (appVersion === undefined) {
+            return `${Name}(${phoneLastFour})`
+          } else {
+            return `${Name}(${phoneLastFour}) + app버전:${appVersion} + 자이로:${gyro}\n + network타입:${networkType} + os버전:${osVersion}`
+          }
         })
         setData(formattedData)
       } else {
